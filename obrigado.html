@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#130B1F"><meta name="robots" content="noindex">
+  <meta name="description" content="O resultado hipotético das leads sem seguimento e três pontos de atenção para a operação comercial da tua agência.">
+  <title>O teu resultado | Simulador de Oportunidades em Risco</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="resultado.js" defer></script>
+  <style>
+    .result-hero{background:#08090a;color:#fff;padding:76px 0 88px}
+    .result-hero h1{font-size:clamp(45px,5.7vw,78px);line-height:1.05;max-width:980px;margin:23px 0 16px}
+    .result-hero p{max-width:750px;color:#c6c6c6;font-size:16px}
+    .result-section{background:#f4f4f2;padding:77px 0 100px}
+    .results-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:20px}
+    .result-box{background:#fff;padding:33px;border:1px solid #e3e3e0;border-radius:14px;min-width:0}
+    .result-label{font-weight:800;font-size:11px;letter-spacing:.13em;color:#747474}
+    .result-figure{font-size:clamp(51px,6vw,88px);letter-spacing:-.07em;font-weight:800;margin:18px 0 11px;line-height:1.1;overflow-wrap:anywhere}
+    .result-box p{font-size:13px;color:#696969;margin:0}
+    .micro-result{background:#ebebea;padding:18px 22px;border:1px solid #e0e0de;border-radius:8px;font-size:14px;max-width:100%}
+    .result-parameters{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 54px}
+    .parameter{background:#e7e7e5;border:1px solid #dededc;padding:10px 13px;border-radius:5px;font-size:12px}
+    .result-detail{max-width:880px}
+    .result-detail h2{font-size:clamp(34px,4vw,56px);line-height:1.08;margin:21px 0}
+    .result-detail p{color:#686868;font-size:14px}
+    .recommendations{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:27px 0 32px}
+    .recommendation{padding:27px 23px;border:1px solid #ddd;background:#fff;border-radius:11px}
+    .recommendation strong{display:block;font-size:17px;letter-spacing:-.025em;margin:17px 0 11px;line-height:1.25}
+    .recommendation p{font-size:13px;color:#666;margin:0}
+    .result-disclaimer{padding:22px 0;border-top:1px solid #d1d1cf;color:#727272;font-size:12px;line-height:1.65}
+    .demo-banner{background:#e6e6e4;padding:17px 19px;border:1px solid #d3d3d1;border-radius:7px;font-size:12px;color:#505050;margin:22px 0}
+    .result-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;align-items:center}
+    .result-actions .btn{min-height:53px}
+    .copy-button{font-weight:700;background:#fff;border:1px solid #d7d7d6;padding:16px 20px;border-radius:5px;cursor:pointer}
+    .copy-status{font-size:12px;color:#555}
+    @media(max-width:700px){.results-grid,.recommendations{grid-template-columns:1fr}.result-hero{padding:54px 0 65px}.result-section{padding:55px 0 75px}.result-box{padding:27px}.result-parameters{margin-bottom:45px}}
+    .result-hero{background:radial-gradient(ellipse 60% 80% at 100% 100%,rgba(168,85,247,.4),transparent 70%),radial-gradient(ellipse 40% 60% at 80% 110%,rgba(76,29,149,.65),transparent 70%),#130B1F;border-top:5px solid #A855F7}
+    .result-hero p{color:#E9E5F0}
+    .result-hero .eyebrow{display:inline-flex;width:max-content;max-width:100%;background:#7C3AED;color:#fff;font-size:clamp(16px,2vw,20px);font-weight:800;padding:11px 20px;border-radius:999px;box-shadow:0 10px 28px rgba(124,58,237,.45)}
+    .result-hero .eyebrow-dot{background:#fff;border-color:#fff;width:10px;height:10px}
+    .result-section{background:#E9E5F0}
+    .result-box{border:0;border-top:4px solid #A855F7;box-shadow:0 14px 34px rgba(19,11,31,.08)}
+    .result-box:nth-child(2){border-top-color:#4C1D95}
+    .result-label{font-size:14px;letter-spacing:0;color:#625C6E}
+    .result-figure{background:linear-gradient(135deg,#A855F7,#7C3AED 60%,#4C1D95);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+    .micro-result,.parameter{background:#fff;border-color:#CDB8F0}
+    .result-box p,.result-detail p,.recommendation p,.copy-status{color:#625C6E}
+    .recommendation{border:0;border-left:3px solid #7C3AED}.recommendation .eyebrow{color:#4C1D95}
+    .result-disclaimer{border-top-color:#CDB8F0;color:#625C6E}
+    .copy-button{border-color:#CDB8F0;color:#130B1F}
+  </style>
+</head>
+<body>
+  <header class="header"><div class="container header-inner"><a href="index.html" class="brand" aria-label="Voltar ao simulador"><img class="brand-icon" src="assets/marca-simbolo.png" alt="" width="79" height="33"><img class="brand-type" src="assets/marca-nome.png" alt="4Improvements" width="155" height="18"></a><a href="index.html#simulador" class="header-link">Refazer simulação</a></div></header>
+  <main>
+    <section class="result-hero"><div class="container"><div class="eyebrow light-eyebrow"><span class="eyebrow-dot"></span> Resultado da simulação</div><h1>O que pode estar em risco quando uma lead fica sem seguimento?</h1></div></section>
+    <section class="result-section"><div class="container">
+      <div class="results-grid">
+        <div class="result-box"><div class="result-label">Leads potencialmente sem seguimento</div><div class="result-figure" id="risk-result">20</div><p>Estimativa baseada na percentagem que introduziste.</p></div>
+        <div class="result-box"><div class="result-label">Receita bruta potencial associada</div><div class="result-figure" id="money-result">6.000 €</div><p>Valor hipotético antes de custos, repartições e comissões.</p></div>
+      </div>
+      <div class="micro-result">A conversão que definiste equivale a <strong id="deal-result">1</strong> <span id="deal-noun">negócio hipotético</span> entre as leads sem seguimento.</div>
+      <div class="result-parameters">
+        <div class="parameter">Leads recebidas: <strong id="p-leads">100</strong></div>
+        <div class="parameter">Sem seguimento: <strong id="p-unfollowed">20%</strong></div>
+        <div class="parameter">Conversão potencial: <strong id="p-conversion">5%</strong></div>
+        <div class="parameter">Receita por negócio: <strong id="p-revenue">6.000 €</strong></div>
+      </div>
+      <div class="result-detail"><div class="eyebrow"><span class="eyebrow-line"></span> Três pontos de atenção</div><h2>Mais visibilidade começa com um próximo passo para cada lead.</h2><p>Estas recomendações são boas práticas gerais. Não resultam da análise dos dados reais da tua agência.</p></div>
+      <div class="recommendations">
+        <article class="recommendation"><span class="eyebrow">01</span><strong>Responsável e próxima ação</strong><p>Garante que cada lead tem um responsável, uma data e um próximo contacto definido depois de cada tentativa.</p></article>
+        <article class="recommendation"><span class="eyebrow">02</span><strong>Tempos e tentativas de contacto</strong><p>Acompanha quanto tempo a equipa demora a responder e quantas tentativas faz antes de deixar uma oportunidade parada.</p></article>
+        <article class="recommendation"><span class="eyebrow">03</span><strong>Visibilidade para direção e parceiros</strong><p>Define indicadores partilhados sobre o percurso das leads, para distinguir problemas de captação de falhas de acompanhamento.</p></article>
+      </div>
+      <div class="result-disclaimer">A receita apresentada é condicional e hipotética. Assume que a taxa escolhida produz negócios adicionais concluídos e que a receita média indicada é efetivamente recebida. Não garante que as leads sem seguimento possam ser recuperadas, nem desconta custos, comissões repartidas ou negócios que aconteceriam de qualquer forma. Valores fracionários correspondem apenas a médias matemáticas.</div>
+      <div class="result-actions"><a class="btn btn-dark" href="index.html#simulador">Fazer uma nova simulação</a></div>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><img class="brand-icon" src="assets/marca-simbolo.png" alt="" width="64" height="26"><img class="brand-type" src="assets/marca-nome.png" alt="4Improvements" width="148" height="16"></a><div class="footer-links"><span>© 2026 4Improvements</span></div></div></footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#130B1F">
+  <meta name="description" content="Mais leads não significam mais negócios. Descobre o potencial hipotético das oportunidades sem seguimento na tua agência imobiliária.">
+  <title>Simulador de Oportunidades em Risco | 4Improvements</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main id="topo">
+    <!-- 01: Primeiro impacto -->
+    <section class="hero dark-section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Mais leads não significam <em>mais negócios.</em> Quantas oportunidades está a tua agência a deixar para trás?</h1>
+          <p class="hero-highlight">Uma oportunidade pode ficar esquecida no CRM, mesmo depois de ter custado dinheiro a gerar.</p>
+          <a class="btn btn-light hero-cta" href="#simulador">Calcular as minhas oportunidades em risco</a>
+        </div>
+        <div class="sim-card" id="simulador">
+          <div class="sim-card-head"><span>Faz a tua simulação</span><span>4 indicadores</span></div>
+          <div class="sim-content">
+            <div class="range-group">
+              <div class="range-head"><label for="leads">1. Leads recebidas</label><output for="leads" id="leads-out">100</output></div>
+              <p>Quantas leads recebeu a tua agência no período em análise?</p>
+              <input id="leads" type="range" min="20" max="2000" value="100" step="10" aria-describedby="leads-help">
+              <div class="range-ends" id="leads-help"><span>20</span><span>2.000</span></div>
+            </div>
+            <div class="range-group">
+              <div class="range-head"><label for="unfollowed">2. Leads sem seguimento</label><output for="unfollowed" id="unfollowed-out">20%</output></div>
+              <p>Percentagem que ficou sem uma próxima ação definida.</p>
+              <input id="unfollowed" type="range" min="0" max="80" value="20" step="1" aria-describedby="unfollowed-help">
+              <div class="range-ends" id="unfollowed-help"><span>0%</span><span>80%</span></div>
+            </div>
+            <div class="range-group">
+              <div class="range-head"><label for="conversion">3. Conversão potencial dessas leads</label><output for="conversion" id="conversion-out">5%</output></div>
+              <p>Percentagem hipotética das leads sem seguimento que poderia concluir negócio.</p>
+              <input id="conversion" type="range" min="0" max="30" value="5" step="0.5" aria-describedby="conversion-help">
+              <div class="range-ends" id="conversion-help"><span>0%</span><span>30%</span></div>
+            </div>
+            <div class="range-group">
+              <div class="range-head"><label for="revenue">4. Receita média por negócio</label><output for="revenue" id="revenue-out">6.000 €</output></div>
+              <p>Receita bruta média da agência antes de custos e repartições.</p>
+              <input id="revenue" type="range" min="1000" max="20000" value="6000" step="500" aria-describedby="revenue-help">
+              <div class="range-ends" id="revenue-help"><span>1.000 €</span><span>20.000 €</span></div>
+            </div>
+            <div class="locked-result" aria-hidden="true"><div class="locked-item"><span>Leads em risco</span><strong>00</strong></div><div class="locked-item"><span>Receita potencial</span><strong>00 000 €</strong></div><div class="locked-badge">Resultado bloqueado</div></div>
+            <div class="sim-action">
+              <button class="btn btn-dark btn-wide" id="reveal-form" type="button" aria-expanded="false" aria-controls="form-panel">Ver o meu resultado personalizado</button>
+            </div>
+            <div class="form-panel" id="form-panel" hidden>
+              <div class="form-panel-top"><span class="eyebrow">Último passo</span><h3>Já fizeste as contas. Agora descobre o que representam.</h3><p>Desbloqueia o número de leads em risco, a receita hipotética associada e três pontos de atenção para a tua operação comercial.</p></div>
+              <form id="lead-form" novalidate>
+                <div class="field"><label for="fullName">Nome completo <span>*</span></label><input id="fullName" name="nome" type="text" autocomplete="name" placeholder="O teu nome" required minlength="2" maxlength="120"></div>
+                <div class="field"><label for="email">Email profissional <span>*</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="nome@agencia.pt" required maxlength="180"></div>
+                <div class="field"><label for="phone">Telemóvel <span>*</span></label><input id="phone" name="telefone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+351 9XX XXX XXX" required minlength="9" maxlength="25"></div>
+                <label class="check-row"><input type="checkbox" id="privacy" name="privacidade" required><span>Li a <a href="privacidade.html" target="_blank" rel="noopener noreferrer">informação de privacidade</a> e compreendo como os meus dados são utilizados para disponibilizar o diagnóstico. <strong>*</strong></span></label>
+                <label class="check-row"><input type="checkbox" id="marketing" name="marketing"><span>Quero também receber conteúdos e comunicações comerciais sobre gestão imobiliária. (Opcional)</span></label>
+                <p class="form-error" id="form-error" role="alert" aria-live="polite" hidden></p>
+                <button type="submit" class="btn btn-dark btn-wide">Receber o meu diagnóstico gratuito</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02: O problema -->
+    <section class="problem section" aria-labelledby="problem-title">
+      <div class="container">
+        <div class="problem-heading"><h2 id="problem-title">O problema não termina numa lead sem resposta. <span class="muted-heading">Afeta toda a operação comercial.</span></h2>
+          <p>Quando não existe um processo claro de acompanhamento, as consequências vão muito além de um contacto esquecido.</p>
+        </div>
+        <div class="risk-levels">
+          <article class="risk-level">
+            <div class="risk-number">01 <span>Consultor</span></div>
+            <h3>A oportunidade fica parada.</h3>
+            <p>A lead entra. O consultor tenta ligar. O cliente não atende.</p>
+            <p>Sem uma próxima ação definida, com responsável e data, o contacto fica no CRM à espera de uma tentativa que pode nunca acontecer.</p>
+          </article>
+          <article class="risk-level">
+            <div class="risk-number">02 <span>Direção</span></div>
+            <h3>Perde-se visibilidade sobre o negócio.</h3>
+            <p>O broker deixa de conseguir distinguir se faltam oportunidades, se as leads têm pouca qualidade ou se simplesmente não estão a ser acompanhadas.</p>
+            <p>Sem dados sobre o percurso de cada contacto, identificar o problema torna-se mais difícil.</p>
+          </article>
+          <article class="risk-level">
+            <div class="risk-number">03 <span>Parceiros</span></div>
+            <h3>Começam os conflitos e as decisões incompletas.</h3>
+            <p>A agência questiona o investimento e a qualidade das leads. O parceiro de marketing não sabe o que aconteceu depois da entrega.</p>
+            <p>Ambos podem acabar por decidir sem conhecer o percurso comercial completo.</p>
+          </article>
+        </div>
+        <div class="data-heading"><span class="eyebrow">O que nos dizem os estudos</span><span class="data-heading-line"></span></div>
+        <div class="stats-grid three-stats">
+          <article class="stat-card">
+            <div class="stat-upper"><span>HBR · EUA · 2011</span><span>01</span></div>
+            <div class="stat-value">23<span>%</span></div>
+            <p>Aproximadamente 23% das 2.241 empresas analisadas <strong>não responderam ao contacto de teste</strong> enviado pelos investigadores.</p>
+            <p class="source">Harvard Business Review, 2011. Estudo multissetorial, não específico do imobiliário português.</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-upper"><span>HBR · EUA · 2011</span><span>02</span></div>
+            <div class="stat-value">~7<span>×</span></div>
+            <p>Contactar uma lead na primeira hora esteve associado a uma probabilidade de <strong>qualificação quase sete vezes superior</strong> à tentativa uma hora mais tarde.</p>
+            <p class="source">Harvard Business Review, 2011. Mede qualificação, não vendas nem receita.</p>
+          </article>
+          <article class="stat-card">
+            <div class="stat-upper"><span>RD Station · Brasil · 2026</span><span>03</span></div>
+            <div class="stat-value">67<span>%</span></div>
+            <p>No panorama imobiliário analisado, <strong>67% das empresas não tinham um acordo formal</strong> de responsabilidades e prazos entre Marketing e Vendas.</p>
+            <p class="source">Panorama RD Station, Imobiliário 2026. Dados do mercado brasileiro, não português.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 04: Fecho e reforço -->
+    <section class="closing dark-section" aria-labelledby="closing-title">
+      <div class="container closing-layout">
+        <div><h2 id="closing-title">Antes de pedires mais leads, certifica-te de que a tua agência <em>acompanha as que já recebe.</em></h2></div>
+        <div class="closing-copy"><p>Gerar oportunidades é apenas o início. Cada contacto precisa de um responsável, um próximo passo e um acompanhamento consistente.</p><p><strong>Porque uma lead não deixa de ser uma oportunidade só porque não atendeu a primeira chamada.</strong></p><p>O CRM guarda os contactos. O processo garante continuidade. A direção precisa de saber se essa continuidade está a acontecer.</p><a class="btn btn-light" href="#simulador">Simular as minhas oportunidades em risco</a></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><a href="#topo" class="brand footer-brand" aria-label="Voltar ao início"><img class="brand-icon" src="assets/marca-simbolo.png" alt="" width="64" height="26"><img class="brand-type" src="assets/marca-nome.png" alt="4Improvements" width="148" height="16"></a><div class="footer-links"><span>© 2026 4Improvements</span></div></div></footer>
+</body>
+</html>
