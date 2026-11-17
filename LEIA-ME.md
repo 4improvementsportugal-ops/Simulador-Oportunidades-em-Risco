@@ -30,7 +30,7 @@ Exemplo inicial: 100 leads × 20% = 20 leads em risco; 20 × 5% = 1 negócio hip
 
 ## Avisos antes da publicação
 
-- **O formulário ainda não recolhe leads efetivas.** Não há backend, GHL, n8n, checkout, serviço de email ou envio dos dados pessoais.
+- **Formulário ligado (2026-11-17):** envia as leads em JSON para o webhook GoHighLevel (`WEBHOOK_URL` no topo de `script.js`) e dispara o evento `Lead` do Meta Pixel 1190659816630727 (instalado em `index.html` e `obrigado.html`). Uploads manuais destes ficheiros apagam esta configuração.
 - Apenas os quatro valores numéricos da simulação são armazenados temporariamente na sessão e colocados na URL de resultado como alternativa de navegação.
 - Substituir a nota provisória de privacidade por uma política adequada e verificar conformidade com RGPD.
 - Ligar o formulário a um endpoint HTTPS para nome, email, telemóvel, quatro parâmetros e consentimentos separados. Não colocar segredos de API no JavaScript.
